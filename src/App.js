@@ -4,7 +4,7 @@ function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
+  console.log("hi");
   const handleLogin = () => {
     if (username === "manish" && password === "1234") {
       setLoggedIn(true);
