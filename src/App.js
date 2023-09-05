@@ -1,19 +1,22 @@
 import React, { useState } from "react";
+import ErrorPopup from "./Error";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  console.log("hi");
+  const [showError, setShowError] = useState(false); // New state for error notification
+
   const handleLogin = () => {
     if (username === "manish" && password === "1234") {
       setLoggedIn(true);
-    }else{
-      alert('Incorrect login details')
+    } else {
+      setShowError(true); // Display error notification
     }
   };
-
-
+  const closeErrorPopup = () => {
+    setShowError(false);
+  };
   return (
     <div className="App">
       {loggedIn ? (
@@ -64,6 +67,9 @@ function App() {
           <button style={{ marginTop: "20px" }} onClick={handleLogin}>
             Login
           </button>
+
+          {showError && <ErrorPopup onClose={closeErrorPopup} />}
+
         </div>
       )}
     </div>
