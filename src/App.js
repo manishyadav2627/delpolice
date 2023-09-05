@@ -8,6 +8,8 @@ function App() {
   const handleLogin = () => {
     if (username === "manish" && password === "1234") {
       setLoggedIn(true);
+    }else{
+      alert('Incorrect login details')
     }
   };
 
