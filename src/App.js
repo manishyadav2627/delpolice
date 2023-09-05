@@ -11,11 +11,6 @@ function App() {
     }
   };
 
-  const handleLogout = () => {
-    setLoggedIn(false);
-    setUsername("");
-    setPassword("");
-  };
 
   return (
     <div className="App">
