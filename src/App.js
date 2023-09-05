@@ -20,13 +20,33 @@ function App() {
   return (
     <div className="App">
       {loggedIn ? (
-        <div>
+        <div
+          style={{
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            paddingTop: "50px",
+          }}
+        >
           <h2>Welcome</h2>
-          <p>Name: Manish</p>
-          <button onClick={handleLogout}>Logout</button>
+          <p>Name: xyz</p>
+          <p>Father: Xyz</p>
+          <p>Mobile: 99999999</p>
+          <p>Address: Gurgaon, Hr</p>
         </div>
       ) : (
-        <div>
+        <div
+          style={{
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            paddingTop: "50px",
+          }}
+        >
           <h2>Login</h2>
           <div>
             <label>Username:</label>
@@ -36,7 +56,7 @@ function App() {
               onChange={(e) => setUsername(e.target.value)}
             />
           </div>
-          <div>
+          <div style={{ marginTop: "20px" }}>
             <label>Password:</label>
             <input
               type="password"
@@ -44,7 +64,9 @@ function App() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <button onClick={handleLogin}>Login</button>
+          <button style={{ marginTop: "20px" }} onClick={handleLogin}>
+            Login
+          </button>
         </div>
       )}
     </div>
